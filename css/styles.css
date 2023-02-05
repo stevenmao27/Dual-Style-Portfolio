@@ -47,6 +47,11 @@ body {
     background-color: var(--latte-coffee);
     font-family: 'itim';
     font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.switch-style-wrapper > button:hover {
+    transform: scale(1.1);
 }
 
 .navbar ul {
@@ -83,9 +88,6 @@ body {
     text-shadow: var(--milk) 0px 0px 5px;
 }
 
-
-/* * Home */
-
 .bgbg {
     position: fixed;
     height: 100%;
@@ -97,7 +99,7 @@ body {
     background-attachment: fixed;
     -webkit-filter: blur(10px);
     filter:blur(10px);
-    transition: all 0.3s cubic-bezier(0.5, 0.7, 0.8, 0.9, 1);
+    transition: all 1s cubic-bezier(0.1, 0.75, 1, 1);
 }
 
 .bgbg-wrapper {
@@ -110,6 +112,8 @@ body {
     left: 0em;
     z-index: -1;
 }
+
+/* * Home */
 
 .greetings {
     position: relative;
@@ -153,15 +157,15 @@ body {
 .greetings > h1 {
     text-align: center;
     font-size: 5rem;
-    color: var(--black-coffee);
-    text-shadow: var(--milk) 0px 0px 5px;
+    color: var(--milk);
+    text-shadow: var(--black-coffee) 0px 0px 8px;
 }
 
 .greetings > p {
     text-align: center;
     font-size: 1.5rem;
-    color: var(--black-coffee);
-    text-shadow: var(--milk) 0px 0px 5px;
+    color: var(--milk);
+    text-shadow: var(--black-coffee) 0px 0px 8px;
 }
 
 .social-wrapper {
@@ -186,14 +190,24 @@ body {
 }
 
 .social-icon:hover {
-    animation: flip 1s ease;
+    animation: flip 1s ease-in-out;
+    transform-origin: center top;
 }
 @keyframes flip {
     0% {
-        transform: perspective(500px) rotateX(0deg);
+        transform: perspective(100px) rotateX(0deg);
+    }
+    25% {
+        transform: perspective(100px) rotateX(-12deg);
+    }
+    50% {
+        transform: perspective(100px) rotateX(7deg);
+    }
+    75% {
+        transform: perspective(100px) rotateX(-3deg);
     }
     100% {
-        transform: perspective(500px) rotateX(360deg);
+        transform: perspective(100px) rotateX(0deg);
     }
 }
 
