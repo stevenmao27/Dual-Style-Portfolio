@@ -1,3 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+    --night-blue: #13005A;
+    --blue: #00337C;
+    --sky-blue: #A3C7D6;
+    --sunset-red: #DC3535;
+    --sunset-orange: #FD841F;
+    --sunset-yellow: #FFE15D;
+}
+
 body {
-    background-color: black;
+    position: relative;
+    background-color: var(--night-blue);
+    height: 100vh;
+    margin: 0px;
+    padding: 3em;
+    font-family: 'Playfair Display', serif;
+    overflow: hidden;
+}
+
+.navbar {
+    position: relative;
+    right: 3em;
+    background-color: #00337C;
+    text-align: right;
+    padding: 2em;
+    transition: all 0.3s ease;
+}
+
+.switch-style-wrapper {
+}
+
+.switch-style-wrapper > button {
+}
+
+.switch-style-wrapper > button:hover {
+    transform: scale(1.1);
+}
+
+.navbar ul {
+    margin: 0px;
+    list-style-type: none;
+}
+
+.navbar li {
+    margin: 0em 1em;
+}
+
+.navbar li > a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.arrow-wrapper {
+    display: none;
+    position: absolute;
+    left: 55px;
+    top: 90px;
+}
+
+.arrow-wrapper > h3 {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0px;
+    width: 8rem;
+    color: var(--black-coffee);
+    text-shadow: var(--milk) 0px 0px 5px;
+}
+
+.bgbg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: url("../files/dall-e-night-sky-touchup.png");
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.2);
+    background-attachment: fixed;
+    -webkit-filter: blur(7px);
+    filter:blur(7px);
+    transition: all 1s cubic-bezier(0.1, 0.75, 1, 1);
+}
+
+.bgbg-wrapper {
+    background-attachment: fixed;
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0em;
+    left: 0em;
+    z-index: -1;
 }

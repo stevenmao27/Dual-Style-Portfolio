@@ -33,4 +33,4 @@ const addMouseEffect = (target_element, scale) => {
         document.querySelector(target_element).style.transform = `scale(${scale}) translate(calc((-${event.clientX}px + 50vw) * 0.1), calc((-${event.clientY}px + 50vh) * 0.1))`
     }));
 }
-addMouseEffect('.bgbg', 1.2);
+// addMouseEffect('.bgbg', 1.2);
