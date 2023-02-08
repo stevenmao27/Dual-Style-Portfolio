@@ -69,14 +69,26 @@ body {
 
 .navbar li {
     margin: 1em 0em;
-    padding: 1em 0em;
 }
 
 .navbar li > a {
+    display: block;
+    padding: 0.5em;
     color: white;
     text-decoration: none;
     text-align: center;
     font-size: 2rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.navbar li > a:hover {
+    /* background: -webkit-linear-gradient(45deg, red, orange, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    border: 1px solid white;
 }
 
 .arrow-wrapper {
@@ -202,8 +214,14 @@ body {
 
   .skill-card {
     display: inline-block;
+    letter-spacing: 3px;
     margin: 1em 0.5em;
-  }
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
 
   .interest-wrapper {
     margin: 1em;
@@ -220,9 +238,15 @@ body {
   }
 
   .interest-card > b {
+    display: inline-block;
     font-family: 'Playfair Display', serif;
     letter-spacing: 3px;
     font-size: 1.5rem;
+    transition: all 0.5s ease;
+  }
+
+  .interest-card > b:hover {
+    transform: translate(0px, -3px);
   }
 
   .resume-wrapper {
@@ -243,7 +267,13 @@ body {
     padding: 1em 2em;
     border: 1px solid white;
     border-radius: 5px;
+    transition: all 0.5s ease;
   }
+
+    .resume-download:hover {
+        background-color: white;
+        color: var(--night-blue);
+    }
 
   .portfolio-wrapper {
     position: relative;
@@ -278,6 +308,12 @@ body {
     padding: 1em 2em;
     border: 1px solid white;
     border-radius: 5px;
+    transition: all 0.5s ease;
+  }
+
+  .portfolio-block a:hover {
+    background-color: white;
+    color: var(--night-blue);
   }
 
   .service-wrapper {

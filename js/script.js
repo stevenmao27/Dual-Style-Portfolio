@@ -28,12 +28,14 @@ const switchMode = () => {
     }
 
     // style2 animation
-    if (saved_style === style2_path) {
-        setTimeout(() => {
-            const line = document.querySelector('.style2-line');
-            line.style.height = '100%';
-        }, 1000);
-    }
+    setTimeout(() => { //makes sure the stylesheet is loaded
+        const line = document.querySelector('.style2-line');
+        let lineHeight = (elem.getAttribute('href') === style2_path) ? '100%' : '0%';
+        setTimeout(() => { //smooth animation
+            line.style.height = lineHeight;
+            console.log("set height to " + lineHeight);
+        }, 500);
+    }, 1000);
 }
 
 // * For Home Page Only
@@ -50,4 +52,4 @@ const addMouseEffect = (target_element, scale) => {
         document.querySelector(target_element).style.transform = `scale(${scale}) translate(calc((-${event.clientX}px + 50vw) * 0.1), calc((-${event.clientY}px + 50vh) * 0.1))`
     }));
 }
-// addMouseEffect('.bgbg', 1.2); //might be laggy on some devices
+addMouseEffect('.bgbg', 1.2); //might be laggy on some devices
