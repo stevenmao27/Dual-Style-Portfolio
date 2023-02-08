@@ -190,17 +190,17 @@ body {
 }
 
 .social-icon:hover {
-    animation: flip 1s ease-in-out;
+    animation: flip 1.5s ease-in-out;
     transform-origin: center top;
 }
 @keyframes flip {
     0% {
         transform: perspective(100px) rotateX(0deg);
     }
-    25% {
+    20% {
         transform: perspective(100px) rotateX(-12deg);
     }
-    50% {
+    45% {
         transform: perspective(100px) rotateX(7deg);
     }
     75% {
