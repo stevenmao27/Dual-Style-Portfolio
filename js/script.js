@@ -14,6 +14,14 @@ window.onload = () => {
             line.style.height = '100%';
         }, 1000);
     }
+
+    // mouse parallax effect
+    const addMouseEffect = (target_element, scale) => {
+        document.addEventListener('mousemove', (event => {
+            document.querySelector(target_element).style.transform = `scale(${scale}) translate(calc((-${event.clientX}px + 50vw) * 0.1), calc((-${event.clientY}px + 50vh) * 0.1))`
+        }));
+    }
+    addMouseEffect('.bgbg', 1.2); //might be laggy on some devices
 }
 
 const switchMode = () => {
@@ -27,29 +35,13 @@ const switchMode = () => {
         localStorage.setItem('stylesheet', style1_path);
     }
 
+
     // style2 animation
     setTimeout(() => { //makes sure the stylesheet is loaded
         const line = document.querySelector('.style2-line');
         let lineHeight = (elem.getAttribute('href') === style2_path) ? '100%' : '0%';
         setTimeout(() => { //smooth animation
             line.style.height = lineHeight;
-            console.log("set height to " + lineHeight);
         }, 500);
     }, 1000);
 }
-
-// * For Home Page Only
-
-// if (document.title.includes('Home')) {
-//     document.addEventListener('mousemove', (event) => {
-//         const bg = document.querySelector('.greetings-bg');
-//         bg.style.transform = `scale(1.2) translate(calc((${event.clientX}px - 50vw) * 0.1), calc((${event.clientY}px - 50vh) * 0.1))`
-//     })
-// }
-
-const addMouseEffect = (target_element, scale) => {
-    document.addEventListener('mousemove', (event => {
-        document.querySelector(target_element).style.transform = `scale(${scale}) translate(calc((-${event.clientX}px + 50vw) * 0.1), calc((-${event.clientY}px + 50vh) * 0.1))`
-    }));
-}
-addMouseEffect('.bgbg', 1.2); //might be laggy on some devices
