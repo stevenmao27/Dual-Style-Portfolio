@@ -1,6 +1,6 @@
 # Dual Style Portfolio
 
-> UI/UX Design and Front-End Development
+## UI/UX Design and Front-End Development
 
 Software Engineering first project: a [portfolio website](https://people.tamu.edu/~stevenm27)  with two styles using the same HTML structure. 
 
